@@ -1,0 +1,22 @@
+<h1>Alta cliente</h1>
+<div>
+  Nombre:<input  [(ngModel)]="cliente.nombre" type="text">
+</div>
+<div>
+  CIF:<input [(ngModel)]="cliente.CIF" type="text">
+</div>
+<div>
+  Direccion<input [(ngModel)]="cliente.direccion" type="text">
+</div>
+<div>
+  Grupo
+  <select [(ngModel)]="cliente.grupo" type="text">
+    <option>A</option>
+    <option>B</option>
+  </select>
+</div>
+<button (click)="guardar()">Guardar</button>
+<h1>Listado clientes</h1>
+<div *ngFor="let c of clientes">
+  <app-cliente [cliente]="c"></app-cliente>
+</div>
